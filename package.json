@@ -1,0 +1,13 @@
+{
+  "name": "resource-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Private local resource index with a LunaTV-compatible VOD adapter",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "test": "node --test",
+    "check": "node --check src/catalog.js && node --check src/server.js"
+  }
+}

@@ -1,0 +1,18 @@
+services:
+  resource-hub:
+    build: .
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:3001:3001"
+    environment:
+      API_TOKEN: ${API_TOKEN:?Set a random API_TOKEN in .env}
+      CATALOG_PATH: ${CATALOG_PATH:-examples/catalog.demo.json}
+      COMPAT_ALLOWED_IPS: ${COMPAT_ALLOWED_IPS:-}
+    volumes:
+      - ./data:/app/data:ro
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 64
+    mem_limit: 128m

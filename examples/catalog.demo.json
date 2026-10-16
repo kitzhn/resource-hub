@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "resources": [
+    {
+      "id": "demo-documentary",
+      "kind": "vod",
+      "title": "演示纪录片 / Demo Documentary",
+      "sourceId": "local-demo",
+      "sourceUrl": "https://example.invalid/documentary",
+      "fetchedAt": "2026-10-16T00:00:00Z",
+      "rightsStatus": "demo",
+      "tags": ["演示", "纪录片", "demo"],
+      "episodes": [{ "title": "演示第1集", "url": "https://example.invalid/demo.m3u8" }]
+    },
+    {
+      "id": "demo-torrent",
+      "kind": "torrent",
+      "title": "演示 4K 文件 / Demo 4K File",
+      "sourceId": "local-demo",
+      "sourceUrl": "https://example.invalid/torrent",
+      "fetchedAt": "2026-10-16T00:00:00Z",
+      "rightsStatus": "demo",
+      "tags": ["演示", "4K", "demo"],
+      "infohashV1": "0000000000000000000000000000000000000000",
+      "magnet": "magnet:?xt=urn:btih:0000000000000000000000000000000000000000&dn=nonfunctional-demo",
+      "resolution": "2160p (demo claim)",
+      "resolutionVerified": false
+    },
+    {
+      "id": "demo-comic",
+      "kind": "comic",
+      "title": "演示漫画 / Demo Comic",
+      "sourceId": "local-demo",
+      "sourceUrl": "https://example.invalid/comic",
+      "fetchedAt": "2026-10-16T00:00:00Z",
+      "rightsStatus": "demo",
+      "tags": ["演示", "漫画", "demo"],
+      "chapters": [{ "title": "演示第1章", "pages": ["https://example.invalid/page-1.jpg"] }]
+    }
+  ]
+}
